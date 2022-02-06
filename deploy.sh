@@ -1,1 +1,1 @@
-php artisan migrate:fresh --seed --env=dev
+php artisan migrate:fresh --seed
