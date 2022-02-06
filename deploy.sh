@@ -1,3 +1,1 @@
-php artisan migrate:fresh
-
-php artisan db:seed --force --no-interaction
+php artisan migrate:fresh --seed --env=dev
