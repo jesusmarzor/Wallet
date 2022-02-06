@@ -1,3 +1,3 @@
 php artisan migrate:fresh
 
-php artisan db:seed --no-interaction
+php artisan db:seed --force --no-interaction
