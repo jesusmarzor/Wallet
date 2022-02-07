@@ -1,5 +1,5 @@
 .table{
-    width: 50%;
+    width: 30rem;
     margin: auto;
     margin-top: 2rem;
     font-size: 1.2rem;
@@ -21,5 +21,11 @@
                 content: "-";
             }
         }
+    }
+}
+
+@media(max-width: 510px){
+    .table{
+        width: 90%;
     }
 }

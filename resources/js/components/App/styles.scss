@@ -5,3 +5,12 @@
         font-size: 5rem;
     }
 }
+
+@media(max-width: 230px){
+    .container{
+        &__money{
+            font-size: 3rem;
+            margin: 0.7rem;
+        }
+    }
+}
