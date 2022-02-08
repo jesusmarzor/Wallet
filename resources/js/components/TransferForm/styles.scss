@@ -1,12 +1,22 @@
 .form{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &__dolar{
         padding: .3rem;
     }
-    &__description,
-    &__amount{
-        padding: .3rem;
+    .amount,
+    .description{
+        position: relative;
+        width: 11rem;
         margin-right: 1rem;
+        &__input{
+            padding: .3rem;
+        }
+        &__error{
+            position: absolute;
+            top: 1.8rem;
+        }
     }
     &__button{
         border: none;
@@ -32,10 +42,10 @@
         &__dolar{
             display: none;
         }
-        &__description,
-        &__amount{
+        .description,
+        .amount{
             margin-right: 0;
-            margin-bottom: 1rem;
+            margin-bottom: 1.8rem;
         }
     }
 }
