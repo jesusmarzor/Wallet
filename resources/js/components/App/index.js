@@ -16,7 +16,8 @@ function App() {
     useEffect(() => {
         setMoney(wallet.money || 0);
         setTransfers(wallet.transfers || []);
-        setLoading(false);
+        if(transfers != [])
+            setLoading(false);
     },[wallet]);
 
     return (

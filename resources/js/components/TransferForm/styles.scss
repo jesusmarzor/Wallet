@@ -1,7 +1,6 @@
+@import '../../../sass/mixins';
 .form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(row,nowrap,center,center);
     &__dolar{
         padding: .3rem;
     }
@@ -24,9 +23,7 @@
         }
         &__dolar{
             position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex(row,nowrap,center,center);
             height: 100%;
             width: 1.5rem;
             background-color: lightslategrey;
