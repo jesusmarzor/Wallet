@@ -6,8 +6,8 @@ import { validateForm } from "./validateForm";
 import "./styles.scss";
 
 export function TransferForm({setMoney, setTransfers}){
-    const [description, setDescription] = useState(null);
-    const [amount, setAmount] = useState(null);
+    const [description, setDescription] = useState("");
+    const [amount, setAmount] = useState(0);
     const [errors, setErrors] = useState({});
     const {newTransfer, execute} = useTransfer();
 
@@ -21,7 +21,7 @@ export function TransferForm({setMoney, setTransfers}){
     },[newTransfer])
 
     const handleDescription = (e) => {
-        setDescription(e.target.value);
+        setDescription(e.target.value.trim());
     }
 
     const handleAmount = (e) => {
@@ -32,6 +32,7 @@ export function TransferForm({setMoney, setTransfers}){
         e.preventDefault();
         if(validateForm(description, amount, setErrors)){
             execute({api:"transfer", data: {description,amount,'wallet_id':1}});
+            e.target.reset();
         }
     }    
 

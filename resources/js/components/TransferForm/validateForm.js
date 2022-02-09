@@ -1,8 +1,8 @@
 export function validateForm(description, amount, setErrors){
     let errors = {};
-    if(description === "" || description === null)
+    if(description === "")
         errors.description = "Se requiere una descripción";
-    if(amount === "" || amount === 0 || amount === null || typeof amount !== 'number')
+    if(amount === 0 || typeof amount !== 'number' || isNaN(amount))
         errors.amount = "Se requiere un número";
     setErrors(errors);
     return Object.keys(errors).length === 0;

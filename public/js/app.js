@@ -215,12 +215,12 @@ function TransferForm(_ref) {
   var setMoney = _ref.setMoney,
       setTransfers = _ref.setTransfers;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
       description = _useState2[0],
       setDescription = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState4 = _slicedToArray(_useState3, 2),
       amount = _useState4[0],
       setAmount = _useState4[1];
@@ -244,7 +244,7 @@ function TransferForm(_ref) {
   }, [newTransfer]);
 
   var handleDescription = function handleDescription(e) {
-    setDescription(e.target.value);
+    setDescription(e.target.value.trim());
   };
 
   var handleAmount = function handleAmount(e) {
@@ -263,6 +263,7 @@ function TransferForm(_ref) {
           'wallet_id': 1
         }
       });
+      e.target.reset();
     }
   };
 
@@ -331,8 +332,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function validateForm(description, amount, setErrors) {
   var errors = {};
-  if (description === "" || description === null) errors.description = "Se requiere una descripción";
-  if (amount === "" || amount === 0 || amount === null || typeof amount !== 'number') errors.amount = "Se requiere un número";
+  if (description === "") errors.description = "Se requiere una descripción";
+  if (amount === 0 || typeof amount !== 'number' || isNaN(amount)) errors.amount = "Se requiere un número";
   setErrors(errors);
   return Object.keys(errors).length === 0;
 }
@@ -713,7 +714,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".form {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.form__dolar {\n  padding: 0.3rem;\n}\n.form .amount,\n.form .description {\n  position: relative;\n  width: 11rem;\n  margin-right: 1rem;\n}\n.form .amount__input,\n.form .description__input {\n  padding: 0.3rem;\n}\n.form .amount__error,\n.form .description__error {\n  position: absolute;\n  top: 1.8rem;\n}\n.form__button {\n  border: none;\n  padding: 0.5rem 1rem;\n  background-color: lightsteelblue;\n  color: #fff;\n  border-radius: 5px;\n  cursor: pointer;\n  outline: none;\n  transition: 0.2s all;\n}\n.form__button:active {\n  transform: scale(0.98);\n}\n\n@media (max-width: 510px) {\n  .form {\n    display: flex;\n    flex-direction: column;\n    width: 90%;\n    margin: auto;\n  }\n  .form__dolar {\n    display: none;\n  }\n  .form .description,\n.form .amount {\n    margin-right: 0;\n    margin-bottom: 1.8rem;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".form {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.form__dolar {\n  padding: 0.3rem;\n}\n.form .amount,\n.form .description {\n  position: relative;\n  width: 11rem;\n  margin-right: 1rem;\n}\n.form .amount__input,\n.form .description__input {\n  padding: 0.3rem;\n}\n.form .amount__error,\n.form .description__error {\n  position: absolute;\n  top: 1.8rem;\n}\n.form__button {\n  border: none;\n  padding: 0.5rem 1rem;\n  background-color: lightsteelblue;\n  color: #fff;\n  border-radius: 5px;\n  cursor: pointer;\n  outline: none;\n  transition: 0.2s all;\n}\n.form__button:active {\n  transform: scale(0.98);\n}\n\n@media (max-width: 510px) {\n  .form {\n    display: flex;\n    flex-direction: column;\n    width: 90%;\n    margin: auto;\n  }\n  .form__dolar {\n    display: none;\n  }\n  .form .description,\n.form .amount {\n    width: 100%;\n    margin-right: 0;\n    margin-bottom: 1.8rem;\n  }\n  .form .description__input,\n.form .amount__input {\n    width: 100%;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
