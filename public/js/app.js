@@ -288,13 +288,13 @@ function TransferForm(_ref) {
           children: errors.description
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
-      className: "form__dolar",
-      htmlFor: "amount",
-      children: "$"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "form__amount amount",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+        className: "amount__dolar",
+        htmlFor: "amount",
+        children: "$"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
         onChange: function onChange(e) {
           return handleAmount(e);
         },
@@ -714,7 +714,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".form {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.form__dolar {\n  padding: 0.3rem;\n}\n.form .amount,\n.form .description {\n  position: relative;\n  width: 11rem;\n  margin-right: 1rem;\n}\n.form .amount__input,\n.form .description__input {\n  padding: 0.3rem;\n}\n.form .amount__error,\n.form .description__error {\n  position: absolute;\n  top: 1.8rem;\n}\n.form__button {\n  border: none;\n  padding: 0.5rem 1rem;\n  background-color: lightsteelblue;\n  color: #fff;\n  border-radius: 5px;\n  cursor: pointer;\n  outline: none;\n  transition: 0.2s all;\n}\n.form__button:active {\n  transform: scale(0.98);\n}\n\n@media (max-width: 510px) {\n  .form {\n    display: flex;\n    flex-direction: column;\n    width: 90%;\n    margin: auto;\n  }\n  .form__dolar {\n    display: none;\n  }\n  .form .description,\n.form .amount {\n    width: 100%;\n    margin-right: 0;\n    margin-bottom: 1.8rem;\n  }\n  .form .description__input,\n.form .amount__input {\n    width: 100%;\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".form {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.form__dolar {\n  padding: 0.3rem;\n}\n.form .amount,\n.form .description {\n  position: relative;\n  width: 11rem;\n  margin-right: 1rem;\n}\n.form .amount__input,\n.form .description__input {\n  padding: 0.3rem;\n}\n.form .amount__error,\n.form .description__error {\n  position: absolute;\n  top: 1.8rem;\n}\n.form .amount__input {\n  padding-left: 2rem;\n}\n.form .amount__dolar {\n  position: absolute;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n  width: 1.5rem;\n  background-color: lightslategrey;\n  border-top-left-radius: 0.2rem;\n  border-bottom-left-radius: 0.2rem;\n  color: #fff;\n}\n.form__button {\n  border: none;\n  padding: 0.5rem 1rem;\n  margin-left: 2rem;\n  background-color: lightsteelblue;\n  color: #fff;\n  border-radius: 5px;\n  cursor: pointer;\n  outline: none;\n  transition: 0.2s all;\n}\n.form__button:active {\n  transform: scale(0.98);\n}\n\n@media (max-width: 510px) {\n  .form {\n    display: flex;\n    flex-direction: column;\n    width: 90%;\n    margin: auto;\n  }\n  .form .description,\n.form .amount {\n    width: 100%;\n    margin-right: 0;\n    margin-bottom: 1.8rem;\n  }\n  .form .description__input,\n.form .amount__input {\n    width: 100%;\n  }\n  .form__button {\n    margin: 0;\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -42,8 +42,8 @@ export function TransferForm({setMoney, setTransfers}){
                 <input onChange={e => handleDescription(e)} className="description__input" type="text" placeholder="Descripción" name="description"/>
                 <p className="description__error"><ErrorMessage>{errors.description}</ErrorMessage></p>
             </div>
-            <label className="form__dolar" htmlFor="amount">$</label>
             <div className="form__amount amount">
+                <label className="amount__dolar" htmlFor="amount">$</label>
                 <input onChange={e => handleAmount(e)} className="amount__input" id="amount" type="number" placeholder="Cantidad" name="amount"/>
                 <p className="amount__error"><ErrorMessage>{errors.amount}</ErrorMessage></p>
             </div>

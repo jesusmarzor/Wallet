@@ -18,9 +18,27 @@
             top: 1.8rem;
         }
     }
+    .amount{
+        &__input{
+            padding-left: 2rem;
+        }
+        &__dolar{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 1.5rem;
+            background-color: lightslategrey;
+            border-top-left-radius: .2rem;
+            border-bottom-left-radius: .2rem;
+            color: #fff;
+        }
+    }
     &__button{
         border: none;
         padding: .5rem 1rem;
+        margin-left: 2rem;
         background-color: lightsteelblue;
         color: #fff;
         border-radius: 5px;
@@ -39,9 +57,6 @@
         flex-direction: column;
         width: 90%;
         margin: auto;
-        &__dolar{
-            display: none;
-        }
         .description,
         .amount{
             width: 100%;
@@ -50,6 +65,9 @@
             &__input{
                 width: 100%;
             }
+        }
+        &__button{
+            margin: 0;
         }
     }
 }
