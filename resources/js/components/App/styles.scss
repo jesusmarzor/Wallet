@@ -2,14 +2,14 @@
     &__money{
         text-align: center;
         margin: 1rem;
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
-@media(max-width: 230px){
+@media(max-width: 350px){
     .container{
         &__money{
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 0.7rem;
         }
     }
